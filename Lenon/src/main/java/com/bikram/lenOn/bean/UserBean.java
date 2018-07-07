@@ -19,6 +19,14 @@ public class UserBean {
 	private String mobile;
 	private String password;
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getfName() {
 		return fName;
 	}

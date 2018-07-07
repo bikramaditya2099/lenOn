@@ -27,7 +27,7 @@ public class LenOnException extends Exception{
 
 	@Override
 	public String toString() {
-		return "LenOnException [code=" + code + ", message=" + message + ", status=" + status + "]";
+		return "{ \"code\":" + code + ", \"message\":" +"\""+ message +"\""+ ", \"status\":" +"\""+ status + "\" }";
 	}
 	
 	

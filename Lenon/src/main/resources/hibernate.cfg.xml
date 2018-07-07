@@ -23,6 +23,8 @@
 
         <!-- Annotated entity classes -->
         <mapping class="com.bikram.lenOn.bean.UserBean"/> 
+        <mapping class="com.bikram.lenOn.bean.CustomerBean"/> 
+        <mapping class="com.bikram.lenOn.bean.CustomerTransaction"/> 
         
     </session-factory>
 </hibernate-configuration>
