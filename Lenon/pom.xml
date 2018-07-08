@@ -50,6 +50,13 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<version>2.0.3.RELEASE</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
 		<dependency>
 			<groupId>postgresql</groupId>
@@ -63,7 +70,7 @@
 		</dependency>
 	</dependencies>
 	<properties>
-	<hibernate-version>4.3.6.Final</hibernate-version>
+		<hibernate-version>4.3.6.Final</hibernate-version>
 		<java.version>1.8</java.version>
 		<postgres-version>9.1-901.jdbc4</postgres-version>
 		<spring-boot-version>1.4.2.RELEASE</spring-boot-version>
