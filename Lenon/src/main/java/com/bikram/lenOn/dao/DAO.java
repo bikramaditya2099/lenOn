@@ -10,7 +10,7 @@ import com.bikram.lenOn.bean.UserBean;
 import com.bikram.lenOn.exception.LenOnException;
 
 public interface DAO {
-void createLogin(UserBean bean) throws LenOnException;
+Object createLogin(UserBean bean) throws LenOnException;
 Object Login(LoginBean bean) throws LenOnException;
 void validateUser(String token) throws LenOnException;
 Object addCustomer(CustomerBean bean,String token) throws LenOnException;

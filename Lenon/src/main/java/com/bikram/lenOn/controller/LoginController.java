@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.bikram.lenOn.bean.CustomerBean;
 import com.bikram.lenOn.bean.LoginBean;
 import com.bikram.lenOn.bean.TransactionRequestBean;
+import com.bikram.lenOn.bean.UserBean;
 import com.bikram.lenOn.dao.DAO;
 import com.bikram.lenOn.dao.DAOImpl;
 import com.bikram.lenOn.exception.LenOnException;
@@ -102,6 +103,20 @@ public class LoginController {
 		DAO dao=new DAOImpl();
 		try {
 			return dao.getCustomerHistory(mobile, token);
+		} catch (LenOnException e) {
+			LOGGER.error(e);
+			return e.toString();
+		}
+	}
+	
+	@RequestMapping(value="/signUp",method=RequestMethod.POST,produces = "application/json")
+	@ResponseBody
+	public Object signUp(@RequestBody UserBean bean)
+	{
+		LOGGER.info("SignUp Process Initiated");
+		DAO dao=new DAOImpl();
+		try {
+			return dao.createLogin(bean);
 		} catch (LenOnException e) {
 			LOGGER.error(e);
 			return e.toString();
